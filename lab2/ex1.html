@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab2 Ex1</title>
+</head>
+
+<body>
+
+    <form action="ex1.php" method="post">
+        <div>
+            <label for="full_name">Full name:</label><br>
+            <input type="text" id="full_name" name="full_name"><br><br>
+        </div>
+        <div>
+            <label for="School">School:</label><br>
+            <input type="text" id="school" name="school"><br><br>
+        </div>
+        <div>
+            <label for="text">Class:</label><br>
+            <input type="text" id="class" name="class"><br><br>
+        </div>
+        <div>
+            <label for="skills">Skills:</label>
+            <button type="button" style="margin-left: 40px;" id="add_more_skills" onClick="handleAddSkills()">Add more</button>
+            <div id="skill_options" style="display: none;">
+                <label for="text">Enter your persional skill:</label><br>
+                <input type="text" id="skill_option"><br>
+                <input type="reset">
+                <button type="button" id="add_skill" onClick="handleAddSkill()">Add</button>
+            </div>
+            <div id="list_skills">
+                <input type="radio" id="html" name="skills" value="HTML" checked>
+                <label for="html">HTML</label><br>
+                <input type="radio" id="css" name="skills" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="radio" id="javascript" name="skills" value="JavaScript">
+                <label for="javascript">JavaScript</label><br>
+            </div>
+            <br>
+        </div>
+        <div>
+            <label for="desciption">Vehicles:</label>
+            <div>
+                <!-- <input type="hidden" name="vehicles" id="vehicle"> -->
+                <input type="checkbox" id="vehicle1" name="vehicles[]" value="Bike">
+                <label for="vehicle1"> Bike</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicles[]" value="Car">
+                <label for="vehicle2"> Car</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicles[]" value="Boat">
+                <label for="vehicle3"> Boat</label>
+            </div>
+            <br>
+        </div>
+        <div>
+            <label for="birthdaytime">Birthday (date and time):</label>
+            <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+            <br><br>
+        </div>
+        <div>
+            <label for="siblings">Siblings (between 1 and 5):</label>
+            <input type="number" id="siblings" name="siblings" min="1" max="5">
+            <br><br>
+        </div>
+        <div>
+            <input type="submit" value="Submit">
+            <input type="reset">
+        </div>
+    </form>
+
+    <script>
+        var form_skill_options = document.getElementById("skill_options")
+
+        function handleAddSkills() {
+            if (form_skill_options.style.display == "none") {
+                form_skill_options.style.display = "block"
+                document.getElementById("add_more_skills").textContent = "Hide"
+            } else {
+                form_skill_options.style.display = "none"
+                document.getElementById("add_more_skills").textContent = "Add more"
+            }
+        }
+
+        function handleAddSkill() {
+            let data = document.getElementById('skill_option').value;
+
+            var x = document.createElement("INPUT");
+            x.setAttribute("type", "radio");
+            x.setAttribute("id", data);
+            x.setAttribute("name", "skills");
+            x.setAttribute("value", data);
+
+            var y = document.createElement("label");
+            y.setAttribute("for", data);
+            y.innerHTML = " " + data
+
+            document.getElementById("list_skills").appendChild(x);
+            document.getElementById("list_skills").appendChild(y);
+            document.getElementById("list_skills").appendChild(document.createElement("br"));
+        }
+    </script>
+</body>
+
+</html>
