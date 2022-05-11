@@ -8,7 +8,7 @@
 </head>
 <body>
 <div style="color:blue; font-size:24px">Select Product We Just Sold</div>
-	<form action="sale.php" method="post">
+	<!-- <form action="sale.php" method="post">
 		<div>
 			Hammer <input type="radio" name="product_desc" value="Hammer">
 			Screw Driver<input type="radio" name="product_desc" value="Screw Driver">
@@ -16,7 +16,7 @@
 		</div>
 		<input type="submit" value="Click To Submit">
 		<input type="reset" value="Reset">
-	</form>
+	</form> -->
 	<?php
 
     $server = 'localhost';
@@ -30,8 +30,18 @@
         die ("Cannot connect to $server using $user");
     } 
     else {
-        //print '<div style="color:blue; font-size:24px">Products Data</div>';
         $SQLcmd = "SELECT * from $table_name";
+        $result = mysqli_query($connect, $SQLcmd);
+        print '<form action="sale.php" method="post"><div>';
+        if(mysqli_num_rows($result) > 0) {
+            while($row = mysqli_fetch_assoc($result)) {
+                print .$row['Product_desc'].'<input type="radio" name="product_desc" value="'.$row['Product_desc']'">';
+            }
+        }
+        print '</div>
+		            <input type="submit" value="Click To Submit">
+		            <input type="reset" value="Reset">
+	            </form>';
         print "<div>The query is <i>$SQLcmd</i></div>";
         $result = mysqli_query($connect, $SQLcmd);
         print "<table border='1'>";
