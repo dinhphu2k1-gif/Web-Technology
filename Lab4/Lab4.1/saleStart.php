@@ -35,7 +35,7 @@
         print '<form action="sale.php" method="post"><div>';
         if(mysqli_num_rows($result) > 0) {
             while($row = mysqli_fetch_assoc($result)) {
-                print .$row['Product_desc'].'<input type="radio" name="product_desc" value="'.$row['Product_desc']'">';
+                print ''.$row['Product_desc'].'<input type="radio" name="product_desc" value="'.$row['Product_desc'].'">';
             }
         }
         print '</div>
