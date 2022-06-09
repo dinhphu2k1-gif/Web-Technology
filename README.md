@@ -5,3 +5,4 @@
 - Lab3: Lê Trường Nguyên
 - Lab4: Nguyễn Xuân Phong
 - Lab5: Trần Công Hoàng, Lê Trường Nguyên
+- Lab6: Trần Công Hoàng, Nguyễn Xuân Phong 
