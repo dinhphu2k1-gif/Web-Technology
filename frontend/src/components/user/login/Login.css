@@ -1,5 +1,5 @@
 #container-login {
-    background-color: #bfcdce;
+    background-color: #ccc;
     position: absolute;
     top: 20%;
     left: 40%;
@@ -19,7 +19,7 @@
   }
 
 #container-register {
-    background-color: #bfcdce;
+    background-color: #ccc;
     position: absolute;
     top: 20%;
     left: 40%;
@@ -39,36 +39,36 @@
 
 #title {
     position: relative;
-    background-color: #bfcdce;
+    background-color: #ccc;
     width: 100%;
     padding: 20px 0px;
     border-radius: 0.35em;
     font-size: 22px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.897);
+    border-bottom: 1px solid #eee;
 }
 
-.lock {
+.login-lock {
 	position: relative;
 	top: 2px;
 }
 
-.input {
+.login-input {
     margin: auto;
     width: 300px;
     border-radius: 4px;
-    background-color: #bfcdce;
+    background-color: #ccc;
     padding: 8px 0px;
     margin-top: 15px;
     display: flex;
     justify-content: space-between;
 }
 
-.input-addon {
+.login-input-addon {
     flex-grow: 1;
     float: left;
-    background-color: #bfcdce;
+    background-color: #ccc;
     padding: 4px 8px;
-    border-right: 1px solid rgba(0, 0, 0, 0.897);
+    border-right: 1px solid #eee;
 }
 
 input[type=checkbox] {
@@ -76,42 +76,38 @@ input[type=checkbox] {
 }
 
 input[type=text] {
-    color: #4d5c72;
+    color: #333;
     margin: 0;
-    background-color: #bfcdce;
-    border: 1px solid #e0ebf0;
+    background-color: #ccc;
+    border: 1px solid #eee;
     padding: 6px 0px;
     border-radius: 3px;
 }
 
-input[type=text]:focus {
-    border: 1px solid #e0ebf0;
-}
-
 input[type=password] {
-    color: #4d5c72;
+    color: #333;
     margin: 0;
-    background-color: #bfcdce;
-    border: 1px solid #e0ebf0;
+    background-color: #ccc;
+    border: 1px solid #eee;
     padding: 6px 0px;
     border-radius: 3px;
 }
 
 input[type=password]:focus {
-    border: 1px solid #e0ebf0;
+    border: 1px solid #eee;
 }
 
 input[type=email] {
-    color: #4d5c72;
+    color: #333;
     margin: 0;
-    background-color: #bfcdce;
-    border: 1px solid #e0ebf0;
+    background-color: #ccc;
+    border: 1px solid #eee;
     padding: 6px 0px;
     border-radius: 3px;
 }
 
 input[type=email]:focus {
-    border: 1px solid #e0ebf0;
+    border: 1px solid #eee;
 }
 
 .forgot-password {
@@ -120,18 +116,18 @@ input[type=email]:focus {
 }
 
 .forgot-password a:link {
-    color: #4d5c72;
+    color: #333;
     text-decoration: none;
 }
 
 .forgot-password a:visited {
-    color: #4d5c72;
+    color: #333;
     text-decoration: none;
 }
 
 .forgot-password a:hover {
-    color: #4d5c72;
-    transition: color 1#4d5c72;
+    color: #333;
+    transition: color 1#333;
 }
 
 .privacy {
@@ -142,18 +138,18 @@ input[type=email]:focus {
 }
 
 .privacy a:link {
-    color: #4d5c72;
+    color: #333;
     text-decoration: none;
 }
 
 .privacy a:visited {
-    color: #4d5c72;
+    color: #333;
     text-decoration: none;
 }
 
 .privacy a:hover {
-    color: #4d5c72;
-    transition: color 1#4d5c72;
+    color: #333;
+    transition: color 1#333;
 }
 
 *:focus {
@@ -167,7 +163,7 @@ input[type=email]:focus {
 input[type=submit] {
     padding: 6px 25px;
     background: #fafafa;
-    color: #4d5c72;
+    color: #333;
     font-weight: bold;
     border: 0 none;
     cursor: pointer;
@@ -191,9 +187,22 @@ input[type=submit] {
     margin-top: 10px;
     padding: 6px 25px;
     background: #ffffff;
-    color: #4d5c72;
+    color: #333;
     font-weight: bold;
     border: 0 none;
     cursor: pointer;
     border-radius: 3px;
+}
+
+.login-c1-login-img {
+    position: absolute;
+    top: 30vh;
+    width: 30%;
+}
+
+.login-c2-login-img {
+    position: absolute;
+    top: 30vh;
+    right: 0;
+    width: 30%;
 }

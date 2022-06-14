@@ -5,7 +5,7 @@ import email from './images/email.png'
 
 export function Bar() {
     return (
-        <div className="social-bar">
+        <div className="header-social-bar">
             <ul>
                 <li>
                 <a href="https://facebook.com">
@@ -23,7 +23,7 @@ export function Bar() {
                 </a>
                 </li>
             </ul>
-            <a href="mailto:you@email.com" className="email-icon">
+            <a href="mailto:you@email.com" className="header-email-icon">
                 <img src={email} alt="" />
             </a>
         </div>

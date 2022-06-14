@@ -12,8 +12,8 @@ export function Header() {
         let navigation = document.getElementById('header_navigation')
 
         const togglehandler = () => {
-            toggle.classList.toggle('active')
-            navigation.classList.toggle('active')
+            toggle.classList.toggle('header-active')
+            navigation.classList.toggle('header-active')
         }
 
         toggle.addEventListener('click', togglehandler)
@@ -25,9 +25,9 @@ export function Header() {
 
     return (
         <header>
-            <div className="logo">XE SANG REP 1:1</div>
-            <a className="toggle" id="header_toggle" onClick={() => isShowed(!show)}></a>
-            <div className="navigation" id='header_navigation' >
+            <div className="header-logo">XE SANG REP 1:1</div>
+            <a className="header-toggle" id="header_toggle" onClick={() => isShowed(!show)}></a>
+            <div className="header-navigation" id='header_navigation' >
                 <Menu/>
                 <Bar/>
             </div>

@@ -23,7 +23,7 @@ import { Product } from './Product'
 
 export function Products() {
     return (
-        <section>
+        <section style={{maxWidth:"70vw"}}>
             <img src={car} className="car-img" alt="" />
             <img src={hot} className="hot-img" alt="" />
             <a href='#'>

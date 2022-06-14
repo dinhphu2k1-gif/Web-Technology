@@ -1,6 +1,7 @@
 import item1 from './images/item.jpg'
 import hot from './images/hot-item.png'
 import { useEffect, useState } from "react"
+import { Link } from 'react-router-dom'
 
 
 export function Product() {
@@ -16,7 +17,7 @@ export function Product() {
                 <div className="action">
                     <span className='car-min-info'>Postcher 2022</span>
                     <span className='car-min-info'>$22M</span>
-                    <a href="#">Launch</a>
+                    <Link to="/product-detail">Xem</Link>
                 </div>
             </div>
         </div>

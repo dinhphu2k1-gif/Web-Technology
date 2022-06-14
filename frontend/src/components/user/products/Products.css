@@ -69,9 +69,10 @@
 
   .hot-img {
     position: fixed;
-    top: 0;
-    right: 24.8vw;
-    height: 20%;
+    padding-top: 100px;
+    top: -100px;
+    right: 25.5vw;
+    height: 30%;
     animation: wiggle 2s linear infinite;
 }
 
