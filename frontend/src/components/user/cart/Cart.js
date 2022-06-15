@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import './Cart.css'
 import car from './images/item.jpg'
 
@@ -52,7 +53,7 @@ export function Cart() {
                 <strong className="cart-total-title">Total</strong>
                 <span className="cart-total-price">$62.68</span>
             </div>
-            <button className="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+            <Link to='/bill' className="btn btn-primary btn-purchase" type="button">PURCHASE</Link>
         </section>
     )
 }
