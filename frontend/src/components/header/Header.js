@@ -25,6 +25,9 @@ export function Header() {
 
     return (
         <header>
+            {window.localStorage.getItem("LCAR_TOKEN") &&
+                <div className="header-logo-2">Welcome,... {window.localStorage.getItem("LCAR_USERNAME")}</div>
+            }
             <div className="header-logo">XE SANG REP 1:1</div>
             <a className="header-toggle" id="header_toggle" onClick={() => isShowed(!show)}></a>
             <div className="header-navigation" id='header_navigation' >

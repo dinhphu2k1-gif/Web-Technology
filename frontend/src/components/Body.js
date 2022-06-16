@@ -17,8 +17,8 @@ export function Body() {
     <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/products" element={<Products/>}/>
-        <Route path="/product-detail" element={<ProductDetail/>}/>
-        <Route path="/cart" element={<Cart/>}/>
+        <Route path="/products/:swag" element={<ProductDetail/>}/>
+        <Route path="/cart/:swag" element={<Cart/>}/>
         <Route path="/bill" element={<Bill/>}/>
         <Route path="/settings" element={<Menu/>}/>
         <Route path="/login" element={<Login/>}/>

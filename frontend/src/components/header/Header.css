@@ -8,6 +8,16 @@
   font-family: "Metal Mania", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.header-logo-2 {
+  position: absolute;
+  top: 80px;
+  left: 100px;
+  font-size: 1rem;
+  font-weight: 700;
+  z-index: 20;
+  font-family: "Metal Mania", 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
 /* TOGGLE */
 .header-toggle {
   position: fixed;

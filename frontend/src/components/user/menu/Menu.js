@@ -40,7 +40,7 @@ export function Menu() {
                     </div>
                     <h2>Trang cá nhân </h2>
                 </a>                
-                <a className="menu-service" href='/cart'>
+                <a className="menu-service" href={'/cart/' + window.localStorage.getItem("LCAR_USER_ID")}>
                     <div className="menu-icon">
                         <img src={item4} alt="" />
                     </div>
