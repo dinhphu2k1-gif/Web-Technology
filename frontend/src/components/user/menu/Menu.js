@@ -16,9 +16,9 @@ export function Menu() {
     return (
         <section style={{maxWidth:"100vw"}}>
             <div className="title">
-                <h1>Xin chào, </h1>
+                <h1>Xin chào, {window.localStorage.getItem("LCAR_USERNAME")}</h1>
                 <p>
-                Chúc bạn một ngày vui vẻ 
+                    Chúc bạn một ngày vui vẻ 
                 </p>
             </div>
             <div className="menu-services">
@@ -33,31 +33,45 @@ export function Menu() {
                         <img src={item2} alt="" />
                     </div>
                     <h2>Trang chủ </h2>
-                </a>                
-                <a className="menu-service" href='/products'>
-                    <div className="menu-icon">
-                        <img src={item3} alt="" />
-                    </div>
-                    <h2>Trang cá nhân </h2>
-                </a>                
-                <a className="menu-service" href={'/cart/' + window.localStorage.getItem("LCAR_USER_ID")}>
-                    <div className="menu-icon">
-                        <img src={item4} alt="" />
-                    </div>
-                    <h2>Giỏ hàng </h2>
-                </a>                
-                <a className="menu-service" href='/login'>
-                    <div className="menu-icon">
-                        <img src={item5} alt="" />
-                    </div>
-                    <h2>Đăng nhập </h2>
-                </a>                
-                <a className="menu-service" href='/register'>
-                    <div className="menu-icon">
-                        <img src={item6} alt="" />
-                    </div>
-                    <h2>Đăng ký </h2>
-                </a>            
+                </a>           
+                {window.localStorage.getItem("LCAR_TOKEN") &&
+                    <a className="menu-service" href={'/cart/' + window.localStorage.getItem("LCAR_USER_ID")}>
+                        <div className="menu-icon">
+                            <img src={item4} alt="" />
+                        </div>
+                        <h2>Giỏ hàng </h2>
+                    </a>                
+                }   
+                {window.localStorage.getItem("LCAR_TOKEN") &&
+                    <a className="menu-service" href='/'
+                        onClick={() => {
+                            localStorage.removeItem("LCAR_TOKEN")
+                            localStorage.removeItem("LCAR_USERNAME")
+                            localStorage.removeItem("LCAR_USER_ID")
+                        }}
+                    >
+                        <div className="menu-icon">
+                            <img src={item5} alt="" />
+                        </div>
+                        <h2>Đăng xuất </h2>
+                    </a>                
+                }    
+                {!window.localStorage.getItem("LCAR_TOKEN") &&
+                    <a className="menu-service" href='/login'>
+                        <div className="menu-icon">
+                            <img src={item5} alt="" />
+                        </div>
+                        <h2>Đăng nhập </h2>
+                    </a>                
+                }
+                {!window.localStorage.getItem("LCAR_TOKEN") &&
+                    <a className="menu-service" href='/register'>
+                        <div className="menu-icon">
+                            <img src={item6} alt="" />
+                        </div>
+                        <h2>Đăng ký </h2>
+                    </a>                 
+                }         
             </div>
         </section>
     )

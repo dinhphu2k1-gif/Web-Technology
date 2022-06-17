@@ -3,6 +3,7 @@ import c1 from './images/c1.png'
 import c2 from './images/c2.png'
 import { useState } from 'react'
 import * as API from '../../../constants/api_config'
+import { Link } from 'react-router-dom'
 
 export function Login() {
 
@@ -86,7 +87,7 @@ export function Login() {
 
                 <div className="register">
                     Don't have an account yet?
-                    <a href="#"><button id="register-link">Register here</button></a>
+                    <Link to="/register"><button id="register-link">Register here</button></Link>
                 </div>
             </div>
         </div>

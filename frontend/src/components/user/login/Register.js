@@ -3,6 +3,7 @@ import c3 from './images/c3.png'
 import c4 from './images/c4.png'
 import { useState } from 'react'
 import * as API from '../../../constants/api_config'
+import { Link } from 'react-router-dom'
 
 export function Register() {
 
@@ -109,7 +110,7 @@ export function Register() {
 
                 <div className="register">
                     Do you already have an account?
-                    <a href="#"><button id="register-link">Log In here</button></a>
+                    <Link to="/login"><button id="register-link">Log In here</button></Link>
                 </div>
             </div>
         </div>

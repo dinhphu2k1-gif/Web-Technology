@@ -31,17 +31,6 @@ main {
     vertical-align: text-bottom;
 }
 
-#home .left button {
-    padding: 15px 20px;
-    margin-top: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    color: white;
-    /* background-color: hsl(266, 96%, 63%); */
-    background-color: blueviolet;
-    border-radius: 5px;
-}
-
 #home .right img {
     display: block;
 }

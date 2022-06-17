@@ -26,6 +26,7 @@ import { useState, useEffect } from 'react'
 export function Products() {
 
     const [products, setProducts] = useState([])
+    const [keyword, setKeyword] = useState("")
 
     useEffect(() => {
         fetch(API.DOMAIN + API.PRODUCTS, {
@@ -66,14 +67,19 @@ export function Products() {
             </div>
 
             <div>
-                <input style={{width:"40vw", height:"40px", background:"rgba(255, 255, 255, 0)", border:"1px solid rgba(0, 0, 0, 0.9)"}} placeholder="Bạn muốn tìm mẫu xe nào ?"></input>
-                <button style={{height:"40px", cursor:"pointer", background:"rgba(255, 255, 255, 0)", border:"1px solid rgba(0, 0, 0, 0.9)"}}>Search</button>
+                <input style={{width:"40vw", height:"40px", background:"rgba(255, 255, 255, 0)", border:"1px solid rgba(0, 0, 0, 0.9)"}} placeholder="Bạn muốn tìm mẫu xe nào ?"
+                    value={keyword}
+                    onChange={(e) => setKeyword(e.target.value)}
+                ></input>
+                <button className='btn' style={{height:"40px"}}>Search</button>
             </div>
 
             <div className="portfolio">
                 {
                     products.map((product, id) => {
-                        return <Product key={product.id} data={{"id":product.id, "name":product.name, "image":product.image, "description":product.description, "price":product.price, "year":product.year}}/>
+                        if (String(product.name).toLocaleLowerCase().includes(keyword.toLocaleLowerCase())) {
+                            return <Product key={product.id} data={{"id":product.id, "name":product.name, "image":product.image, "description":product.description, "price":product.price, "year":product.year}}/>
+                        }
                     })
                 }
             </div>

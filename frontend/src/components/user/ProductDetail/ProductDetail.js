@@ -13,7 +13,7 @@ export function ProductDetail() {
     const [info, setInfo] = useState([])
 
     useEffect(() => {
-        let id = window.location.href.slice(-1)
+        let id = window.location.href.split('/').at(-1) 
         fetch(API.DOMAIN + API.PRODUCTS + "/" + id, {
             method: 'GET', // or 'PUT'
             headers: {
@@ -78,18 +78,25 @@ export function ProductDetail() {
                             <span style={{textDecoration: "line-through", marginRight:"30px"}}>${parseInt(info.price) + 1}M</span>
                             <span>${info.price}M</span>
                         </p>
-                        <button type="submit" style={{cursor:"pointer"}}
-                            onClick={() => handleAddItem()}
-                        >
-
-
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"
-                                className="feather feather-shopping-cart"
-                                style={{verticalAlign: "text-bottom"}}>
-                            </svg>
-                            ADD TO CART
-                        </button>
+                        {window.localStorage.getItem("LCAR_TOKEN") &&
+                            <button className='btn' type="submit" style={{cursor:"pointer"}}
+                                onClick={() => handleAddItem()}
+                            >
+                                ADD TO CART
+                            </button>
+                        }
+                        {!window.localStorage.getItem("LCAR_TOKEN") &&
+                            <div>
+                                <button className='btn' type="submit" style={{cursor:"pointer"}}
+                                    onClick={() => handleAddItem()}
+                                    disabled
+                                >
+                                    ADD TO CART
+                                </button>
+                                <br/>
+                                <span style={{fontFamily:"cursive"}}>Hãy đăng nhập để thêm sản phẩm vào giỏ hàng </span>
+                            </div>
+                        }
                     </div>
 
 
