@@ -41,6 +41,14 @@ export function Menu() {
                         </div>
                         <h2>Giỏ hàng </h2>
                     </a>                
+                }          
+                {window.localStorage.getItem("LCAR_TOKEN") &&
+                    <a className="menu-service" href={'/bills/' + window.localStorage.getItem("LCAR_USER_ID")}>
+                        <div className="menu-icon">
+                            <img src={item5} alt="" />
+                        </div>
+                        <h2>Hóa đơn </h2>
+                    </a>                
                 }   
                 {window.localStorage.getItem("LCAR_TOKEN") &&
                     <a className="menu-service" href='/'
@@ -51,7 +59,7 @@ export function Menu() {
                         }}
                     >
                         <div className="menu-icon">
-                            <img src={item5} alt="" />
+                            <img src={item6} alt="" />
                         </div>
                         <h2>Đăng xuất </h2>
                     </a>                

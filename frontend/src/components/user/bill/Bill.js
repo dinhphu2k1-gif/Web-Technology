@@ -1,8 +1,17 @@
-import './Bill.css'
+import { useState, useEffect } from "react"
 
-export function Bill() {
+
+export function Bill(data) {
+
+    const [info, setInfo] = useState(data.data) 
+
+    useEffect(() => {
+      console.log(info)
+    }, [])
+    
+        
     return (
-        <center>
+        <div style={{float:"left", margin:"20px"}}>
             <div style={{width:"100%", display:"flex", flexDirection:"column", boxShadow:"0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)", marginTop:"100px"}}>
                 <div style={{width:"95%"}}>
                     <div >
@@ -17,11 +26,11 @@ export function Bill() {
                             <tbody>
                                 <tr>
                                     <td style={{verticalAlign:"text-top"}}> 
-                                        <h3>[Our Company]</h3>
+                                        <h3>[HUST]</h3>
                                         <address>
                                             <pre>
-                                                2346 Sector 6 UE <br/>
-                                                karnal <br/>
+                                                1 Dai Co Viet <br/>
+                                                Hust <br/>
                                                 Phone no. 98xxxxxxxx
                                             </pre>
                                         </address>
@@ -88,7 +97,7 @@ export function Bill() {
                                                 </th>
                                             </tr>
                                             <tr>
-                                                [Ajay Kadoula]
+                                                [HUST]
                                             </tr>
                                             <tr>
                                                 [Our Company]
@@ -161,6 +170,6 @@ export function Bill() {
                     <br/><br/><br/><br/>
                 </div>
             </div>
-        </center>
+        </div >
     )
 }

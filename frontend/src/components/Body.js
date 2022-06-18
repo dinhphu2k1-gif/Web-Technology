@@ -8,7 +8,7 @@ import { Login } from './user/login/Login';
 import { Register } from './user/login/Register';
 import { ProductDetail } from './user/ProductDetail/ProductDetail';
 import { Cart } from './user/cart/Cart';
-import { Bill } from './user/bill/Bill';
+import { Bills } from './user/bill/Bills';
 import * as API from '../constants/api_config'
 
 export function Body() {
@@ -19,7 +19,7 @@ export function Body() {
         <Route path="/products" element={<Products/>}/>
         <Route path="/products/:swag" element={<ProductDetail/>}/>
         <Route path="/cart/:swag" element={<Cart/>}/>
-        <Route path="/bill" element={<Bill/>}/>
+        <Route path="/bills/:swag" element={<Bills/>}/>
         <Route path="/settings" element={<Menu/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>

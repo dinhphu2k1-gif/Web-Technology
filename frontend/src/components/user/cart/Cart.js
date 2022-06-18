@@ -4,6 +4,7 @@ import { useEffect } from 'react'
 import * as API from '../../../constants/api_config'
 import { useState } from 'react'
 import { Item } from './Item'
+import no from '../no-product-found.png'
 
 export function Cart() {
 
@@ -160,6 +161,35 @@ export function Cart() {
           });
     }
 
+    function handleCheckOut() {
+        const now = new Date()
+        fetch(API.DOMAIN + API.BILL + '/' + window.localStorage.getItem('LCAR_USER_ID'), {
+          method: 'POST', // or 'PUT'
+          headers: {
+            'accept': '*/*',
+            'Content-Type': 'application/json',
+            'Authorization': window.localStorage.getItem('LCAR_TOKEN')
+          },
+          body: JSON.stringify({user_id: window.localStorage.getItem('LCAR_USER_ID'), name: window.localStorage.getItem('LCAR_USERNAME'), telephone:'0123123123', address:'Vietnam', time_create: now.toISOString().slice(0, 10) + ' ' + now.toLocaleTimeString().slice(0, 8), status:"pending"}),
+          credentials: "same-origin",
+          // mode: 'no-cors'
+        })
+        .then(response => {
+          return response.json()})
+        .then(data => {
+          if (data?.status == 409 || data?.status == 401) {
+              alert(data.message)
+          } else if (data?.status == 201) {
+              window.location.href = '/bills/' + window.localStorage.getItem('LCAR_USER_ID')
+          } else {
+              alert("ERROR")
+          }
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    }
+
     return (
         <section className="container cart-content-section">
             <h2 className="section-header">CART</h2>
@@ -170,7 +200,7 @@ export function Cart() {
             <button className='btn' style={{marginLeft:"20px"}} 
             onClick={() => handleDeleteAll()}>DELETE ALL</button></span>
             </div>
-            <div className="cart-items">
+            <div className="cart-items" style={{textAlign:"center"}}>
                 {items &&
                     items.map((item, id) => {
                       if (id < (change == 1 ? items.length / 2 : items.length)) {
@@ -195,12 +225,17 @@ export function Cart() {
                       }
                     })
                 }
+                {items.length === 0 &&
+                  <img  src={no} width="300px" height="300px"></img>
+                }
             </div>
             <div className="cart-total">
                 <strong className="cart-total-title">Total</strong>
                 <span className="cart-total-price">${(change == 1 ? price / 2 : price)}M</span>
             </div>
-            <Link to='/bill' className="btn btn-primary btn-purchase" type="button">PURCHASE</Link>
+            <button to='/bill' className="btn btn-primary btn-purchase" type="button"
+              onClick={() => handleCheckOut()}
+            >PURCHASE</button>
         </section>
     )
 }

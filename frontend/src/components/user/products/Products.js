@@ -16,7 +16,7 @@ import item15 from './images/portfolio-item15.jpg'
 import item16 from './images/portfolio-item16.jpg'
 import car from './images/car.jpg'
 import hot from './images/hot.png'
-import sale from './images/sale.png'
+import no from '../no-product-found.png'
 import up from './images/up.png'
 import './Products.css'
 import { Product } from './Product'
@@ -74,13 +74,16 @@ export function Products() {
                 <button className='btn' style={{height:"40px"}}>Search</button>
             </div>
 
-            <div className="portfolio">
-                {
+            <div className="portfolio" style={{textAlign:"center"}}>
+                {products &&
                     products.map((product, id) => {
                         if (String(product.name).toLocaleLowerCase().includes(keyword.toLocaleLowerCase())) {
                             return <Product key={product.id} data={{"id":product.id, "name":product.name, "image":product.image, "description":product.description, "price":product.price, "year":product.year}}/>
                         }
                     })
+                }
+                {products.length === 0 &&
+                  <img  src={no} width="300px" height="300px"></img>
                 }
             </div>
         </section>
