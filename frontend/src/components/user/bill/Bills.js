@@ -1,5 +1,4 @@
 import './Bills.css'
-import { Bill } from './Bill'
 import { useEffect, useState } from 'react'
 import * as API from '../../../constants/api_config'
 import no from '../no-product-found.png'
@@ -207,15 +206,14 @@ export function Bills() {
                                                 <table style={{width:"100%"}}>
                                                     <tbody>
                                                         <tr style={{backgroundColor:"#c5ccd8"}}>
-                                                            <th> Name</th>
-                                                            <th> Description</th>
-                                                            <th>Qty</th>
+                                                            <th>NAME</th>
+                                                            <th>DESCRIPTION</th>
+                                                            <th>QUANTITY</th>
                                                             <th>UNIT PRICE</th>
                                                             <th>AMOUNTS</th>
                                                         </tr>
                                                         {
                                                             item.cars.map((car, id) => {
-                                                                console.log(car)
                                                                 return (
                                                                     <tr key={id}>
                                                                         <td>{car.name}</td>
@@ -236,7 +234,7 @@ export function Bills() {
                                                 <table style={{width:"100%"}}>
                                                     <tbody>
                                                         <tr style={{backgroundColor:"#c5ccd8"}}>
-                                                            <th> Thank your For business </th>
+                                                            <th> Thank you For business </th>
                                                             <th>Total={item.price}</th>
                                                         </tr>
                                                     </tbody>

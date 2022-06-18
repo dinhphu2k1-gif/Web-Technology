@@ -27,6 +27,7 @@ export function Products() {
 
     const [products, setProducts] = useState([])
     const [keyword, setKeyword] = useState("")
+    const [sort, setSort] = useState(false)
 
     useEffect(() => {
         fetch(API.DOMAIN + API.PRODUCTS, {
@@ -54,6 +55,20 @@ export function Products() {
           });
     }, [])
     
+    function handleSort() {
+        if (sort) {
+            setProducts(objs => {
+                objs.sort((a,b) => parseInt(a.price) - parseInt(b.price) > 0 ? 1 : -1);
+                return objs
+            })
+        } else {
+            setProducts(objs => {
+                objs.sort((a,b) => parseInt(a.price) - parseInt(b.price) > 0 ? -1 : 1);
+                return objs
+            })
+        }
+        setSort(s => !s)
+    }
 
     return (
         <section style={{maxWidth:"70vw"}}>
@@ -71,7 +86,9 @@ export function Products() {
                     value={keyword}
                     onChange={(e) => setKeyword(e.target.value)}
                 ></input>
-                <button className='btn' style={{height:"40px"}}>Search</button>
+                <button className='btn' style={{height:"40px"}} 
+                    onClick={() => handleSort()}
+                >Sort</button>
             </div>
 
             <div className="portfolio" style={{textAlign:"center"}}>
