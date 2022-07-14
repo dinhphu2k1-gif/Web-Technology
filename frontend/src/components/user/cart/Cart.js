@@ -25,7 +25,7 @@ export function Cart() {
         headers: {
           'accept': '*/*',
           'Content-Type': 'application/json',
-          'Authorization': window.localStorage.getItem("LCAR_TOKEN"),
+          'Authorization': (window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN")),
         },
         credentials: "same-origin",
         // mode: 'no-cors'
@@ -84,7 +84,7 @@ export function Cart() {
         headers: {
           'accept': '*/*',
           'Content-Type': 'application/json',
-          'Authorization': window.localStorage.getItem('LCAR_TOKEN')
+          'Authorization': (window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN"))
         },
         credentials: "same-origin",
         // mode: 'no-cors'
@@ -111,7 +111,7 @@ export function Cart() {
           headers: {
             'accept': '*/*',
             'Content-Type': 'application/json',
-            'Authorization': window.localStorage.getItem('LCAR_TOKEN')
+            'Authorization': (window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN"))
           },
           credentials: "same-origin",
           // mode: 'no-cors'
@@ -139,7 +139,7 @@ export function Cart() {
             headers: {
               'accept': '*/*',
               'Content-Type': 'application/json',
-              'Authorization': window.localStorage.getItem('LCAR_TOKEN')
+              'Authorization': (window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN"))
             },
             body: JSON.stringify({quantity: qtt, total_price: qtt * item.item.total_price / item.item.quantity}),
             credentials: "same-origin",
@@ -168,7 +168,7 @@ export function Cart() {
           headers: {
             'accept': '*/*',
             'Content-Type': 'application/json',
-            'Authorization': window.localStorage.getItem('LCAR_TOKEN')
+            'Authorization': (window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN"))
           },
           body: JSON.stringify({user_id: window.localStorage.getItem('LCAR_USER_ID'), name: window.localStorage.getItem('LCAR_USERNAME'), telephone:'0123123123', address:'Vietnam', time_create: now.toISOString().slice(0, 10) + ' ' + now.toLocaleTimeString().slice(0, 8), status:"pending"}),
           credentials: "same-origin",

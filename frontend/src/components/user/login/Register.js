@@ -29,9 +29,10 @@ export function Register() {
             if (data?.status == 409) {
                 alert(data.message)
             } else if (data?.status == 201) {
-                window.localStorage.setItem("LCAR_TOKEN", data.jwt);
+                window.sessionStorage.setItem("LCAR_TOKEN", data.jwt);
+                window.localStorage.removeItem("LCAR_REMEMBER");
                 window.localStorage.setItem("LCAR_USERNAME", username);
-                window.localStorage.setItem("LCAR_USER_ID", data.id);
+                window.localStorage.setItem("LCAR_USER_ID", data.user_id);
                 window.location.reload()
             } else {
                 alert("ERROR")

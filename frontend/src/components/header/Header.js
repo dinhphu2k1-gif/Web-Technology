@@ -25,7 +25,7 @@ export function Header() {
 
     return (
         <header>
-            {window.localStorage.getItem("LCAR_TOKEN") &&
+            {(window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("9")) &&
                 <div className="header-logo-2">Welcome,... {window.localStorage.getItem("LCAR_USERNAME")}</div>
             }
             <div className="header-logo">XE SANG REP 1:1</div>

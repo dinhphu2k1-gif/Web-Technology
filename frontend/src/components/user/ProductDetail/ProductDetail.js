@@ -45,7 +45,7 @@ export function ProductDetail() {
             headers: {
               'accept': '*/*',
               'Content-Type': 'application/json',
-              'Authorization': window.localStorage.getItem('LCAR_TOKEN')
+              'Authorization': (window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN"))
             },
             body: JSON.stringify({cart_id: window.localStorage.getItem('LCAR_USER_ID'), product_id: info.id, quantity: "1", total_price: info.price}),
             credentials: "same-origin",
@@ -78,14 +78,14 @@ export function ProductDetail() {
                             <span style={{textDecoration: "line-through", marginRight:"30px"}}>${parseInt(info.price) + 1}M</span>
                             <span>${info.price}M</span>
                         </p>
-                        {window.localStorage.getItem("LCAR_TOKEN") &&
+                        {(window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN")) &&
                             <button className='btn' type="submit" style={{cursor:"pointer"}}
                                 onClick={() => handleAddItem()}
                             >
                                 ADD TO CART
                             </button>
                         }
-                        {!window.localStorage.getItem("LCAR_TOKEN") &&
+                        {!(window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN")) &&
                             <div>
                                 <button className='btn' type="submit" style={{cursor:"pointer"}}
                                     onClick={() => handleAddItem()}

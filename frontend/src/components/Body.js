@@ -9,6 +9,7 @@ import { Register } from './user/login/Register';
 import { ProductDetail } from './user/ProductDetail/ProductDetail';
 import { Cart } from './user/cart/Cart';
 import { Bills } from './user/bill/Bills';
+import { Notifications } from './user/notifications/Notifications';
 import * as API from '../constants/api_config'
 
 export function Body() {
@@ -23,6 +24,7 @@ export function Body() {
         <Route path="/settings" element={<Menu/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
+        <Route path="/notifications" element={<Notifications/>}/>
         <Route path="/:swag" element={<Home/>}/>
     </Routes>
   )

@@ -14,7 +14,7 @@ export function Item(data) {
             headers: {
               'accept': '*/*',
               'Content-Type': 'application/json',
-              'Authorization': window.localStorage.getItem('LCAR_TOKEN')
+              'Authorization': (window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN"))
             },
             credentials: "same-origin",
             // mode: 'no-cors'
@@ -42,7 +42,7 @@ export function Item(data) {
             headers: {
               'accept': '*/*',
               'Content-Type': 'application/json',
-              'Authorization': window.localStorage.getItem('LCAR_TOKEN')
+              'Authorization': (window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN"))
             },
             body: JSON.stringify({quantity: qtt, total_price: qtt * info.price / quantity}),
             credentials: "same-origin",

@@ -9,6 +9,7 @@ export function Login() {
 
     const [username, setUsername] = useState("")
     const [password, setPassword] = useState("")
+    const [check, setCheck] = useState(true)
 
     function handleSignIn() {
         fetch(API.DOMAIN + API.USER_SIGN_IN, {
@@ -25,9 +26,15 @@ export function Login() {
             return response.json()})
           .then(data => {
             if(data?.status == 200) {
-                window.localStorage.setItem("LCAR_TOKEN", data.jwt);
+                if(check) {
+                    window.localStorage.setItem("LCAR_TOKEN", data.jwt);
+                    window.localStorage.setItem("LCAR_REMEMBER", 1);
+                } else {
+                    window.localStorage.removeItem("LCAR_REMEMBER")
+                    window.sessionStorage.setItem("LCAR_TOKEN", data.jwt);
+                }
                 window.localStorage.setItem("LCAR_USERNAME", username);
-                window.localStorage.setItem("LCAR_USER_ID", data.id);
+                window.localStorage.setItem("LCAR_USER_ID", data.user_id);
                 window.location.href = "/"
             } else if (data?.status == 401) {
                 alert(data.message)
@@ -73,7 +80,9 @@ export function Login() {
                     </div>
 
                     <div className="login-remember-me">
-                        <input type="checkbox"/>
+                        <input type="checkbox" defaultChecked={check}
+                            onClick={() => setCheck(pre => !pre)}
+                        />
                         <span style={{color: "#333"}}>Remember Me</span>
                     </div>
 
