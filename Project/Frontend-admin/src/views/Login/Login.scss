@@ -1,0 +1,93 @@
+.login-background{
+    height: 100vh;
+    background: rgb(34,193,195);
+    background: linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%);
+
+    .login-container{
+        position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+        width: 400px;
+        height: 550px;
+        margin: 0 auto;
+        // border: 1px solid red;
+        margin: 15px 0;
+        border-radius: 10px;
+        background-color: white;
+        .login-content{
+            padding: 10px;
+
+            .text-login{
+                text-align: center;
+                font-size: 20px;
+                font-weight: 600;
+                padding-top: 10px;
+                
+            }
+            .login-input{
+                margin: 7px 0;
+                .custom-input-password{
+                    position: relative;
+                    .eye{
+                        position: absolute;
+                        
+                        right: 7px;
+                    
+                        top: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+            .btn-login{
+                width: 100%;
+                margin: 10px 0;
+                height: 35px;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                background: rgb(34,193,195);
+                background: linear-gradient(135deg, rgba(34,193,195,1) 0%,     rgba(253,187,45,1) 100%);
+                color:white;
+                font-size: 16px;
+                font-weight: 1000;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .forgot-password{
+                font-size: 12px;
+            }
+            .social-login{
+                display: flex; // chia thành các ô
+                justify-content: center;
+                text-align: center;
+                margin-top:10px;
+
+                .google{
+                    background-color: rgb(240, 39, 39);
+                    border-radius: 50%;
+                    font-size: 30px;
+                    height: 50px;
+                    width: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color:white;
+                    margin-right: 10px;
+                }
+                .facebook{
+                    background-color: rgb(71, 121, 238);
+                    border-radius: 50%;
+                    font-size: 30px;
+                    height: 50px;
+                    width: 50px;
+                    display: flex;
+                    align-items: center;
+                    color: white;
+                    justify-content: center;
+                }
+
+            }
+        }
+    }
+}

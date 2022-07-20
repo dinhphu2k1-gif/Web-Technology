@@ -1,0 +1,27 @@
+SPAN {
+    float: left;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 60pt;
+}
+P {
+    margin-top: 5px;
+}
+.prhead {
+    text-align: right;
+    margin-right: 0.5in;
+    font-family: sans-serif;
+}
+.plhead {
+    font-family: sans-serif;
+}
+.pbody {
+    text-align: justify;
+    text-indent: 0.5in;
+}
+.pfoot {
+    margin-left: 60%;
+    line-height: 300%;
+}
+BODY {
+    background: url("bond.jpg") repeat;
+}

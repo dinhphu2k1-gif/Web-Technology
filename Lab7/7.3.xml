@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Placemark>
+    <name>Định Công, Hoàng Mai, Hà Nội</name>
+    <description>my home</description>
+    <Point>
+        <coordinates>20.980028,105.833634</coordinates>
+    </Point>
+</Placemark>
+</kml>
