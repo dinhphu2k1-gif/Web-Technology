@@ -26,6 +26,7 @@ export function Notifications() {
                 alert(data.message)
             } else if (data?.status == 200) {
                 setNoti(data.data)
+                console.log(data.data);
             } else {
                 alert("ERROR")
             }
@@ -46,7 +47,7 @@ export function Notifications() {
             <div className="cart-items" style={{textAlign:"center"}}>
                 {noti &&
                     noti.map((item, id) => {
-                      if (id < noti.length / 2) {
+                      if (id < noti.length) {
                        return <div className="cart-row" key={id}>
                             <div className="cart-item cart-column">
                                 <span className="cart-item-title">{item?.message}</span>
