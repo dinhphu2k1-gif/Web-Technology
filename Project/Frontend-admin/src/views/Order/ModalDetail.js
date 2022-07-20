@@ -10,10 +10,13 @@ class ModalDetail extends React.Component {
             address: '',
             time_create: '',
             status: '',
+            list_products: '',
         }
     }
     componentDidMount() {
         let a = this.props.detailItem;
+        console.log('item :', a)
+        console.log('list product :', a.list_products)
         this.setState({
             user_id: a.user_id,
             name: a.name,
@@ -21,7 +24,9 @@ class ModalDetail extends React.Component {
             address: a.address,
             time_create: a.time_create,
             status: a.status,
+            list_products: a.list_products,
         })
+
         // console.log('list user la: ', this.props.editItem)
         // this.findUser();
         // let a = this.props.editItem;
@@ -44,6 +49,9 @@ class ModalDetail extends React.Component {
     }
 
     render() {
+        let { a } = this.props.detailItem;
+        let { list_products } = this.state
+        console.log(this.state.list_products)
         // let { a } = this.props.editItem;
         // console.log('>>> check child props', this.props);
         // console.log('>>> check child open modal', this.props.isOpen);
@@ -96,7 +104,22 @@ class ModalDetail extends React.Component {
                             <div className="row">
                                 <div className="col-12 ">
                                     <label>Danh sách sản phẩm</label>
-                                    <div>{this.state.listProducts}</div>
+                                    <div>{
+                                        list_products && list_products.map((item, index) => {
+                                            return (
+                                                <>
+                                                    <span className="col-1 text">Số lượng : {item.quantity}   </span>
+                                                    <span className="col-1 text"> Mã sản phẩm: {item.product_id}   </span>
+                                                    <span className="col-1 text"> Tổng tiền: {item.total_price}   </span>
+
+
+                                                </>
+                                            )
+                                        }
+
+                                        )
+                                    }
+                                    </div>
                                 </div>
 
                             </div>

@@ -154,16 +154,17 @@ class Order extends React.Component {
                 }
                 <div className="page-title">Danh sách đơn hàng</div>
                 <div className="container-fluid">
-                    <div className="btn-warning col-2" style={{ borderRadius: '5%', border: '1px solid grey', cursor: 'pointer', marginBottom: '10px', padding: '5px 5px' }}
+                    {/* <div className="btn-warning col-2" style={{ borderRadius: '5%', border: '1px solid grey', cursor: 'pointer', marginBottom: '10px', padding: '5px 5px' }}
                         onClick={() => this.handleAddNewCar()}
-                    >Tạo mới hoá đơn</div>
+                    >Tạo mới hoá đơn</div> */}
                     <div className="page-content">
                         <div className="row title ">
                             <span className="col-1">STT</span>
                             <span className="col-2 ">User-Id</span>
+                            <span className="col-1 ">Bill-Id</span>
                             <span className="col-3 ">Tên</span>
 
-                            <span className="col-3 ">Trạng thái</span>
+                            <span className="col-2 ">Trạng thái</span>
                             <span className="col-3 ">Thao tác</span>
                         </div>
                         <div className="row detail-user">
@@ -173,9 +174,11 @@ class Order extends React.Component {
                                         <>
                                             <div className="col-1 text ">{index + 1}</div>
                                             <div className="col-2 text ">{item.user_id}</div>
+                                            <div className="col-1 text">{item.id}</div>
+
                                             <div className="col-3 text">{item.name}</div>
 
-                                            <div className="col-3 text">{item.status}</div>
+                                            <div className="col-2 text">{item.status}</div>
 
                                             <div className="col-3">
                                                 <span><button className="btn-primary edit" onClick={() => this.handleDetail(item)} ><FontAwesomeIcon icon={faEye} /></button></span>

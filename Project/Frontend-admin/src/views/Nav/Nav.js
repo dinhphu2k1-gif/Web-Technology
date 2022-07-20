@@ -14,7 +14,11 @@ import {
 } from "react-router-dom";
 import 'font-awesome/css/font-awesome.min.css';
 class Nav extends React.Component {
+    logout = () => {
+        window.location.reload();
+    }
     render() {
+        // let {isLoggin} = this.props.isLoggin;
         return (
             <>
                 {/* <div className="vertical_wrap"> */}
@@ -30,7 +34,7 @@ class Nav extends React.Component {
                     </div>
                     <div>
                         <ul className="menu">
-                            <Link to="/home" exact={true} className="link">
+                            <Link to="/" exact={true} className="link">
                                 <li><a href="#" >
                                     {/* <span className="icon"><i className="fas fa-solid fa-house-user"></i></span> */}
 
@@ -62,12 +66,15 @@ class Nav extends React.Component {
                                     <span className="text">Admin</span>
                                 </a></li>
                             </Link>
-                            <Link to="/" exact className="link">
-                                <li><a href="#">
-                                    <span className="icon"><FontAwesomeIcon icon={faUser} /></span>
-                                    <span className="text">Đăng xuất</span>
-                                </a></li>
-                            </Link>
+
+                            <li style={{ cursor: 'pointer' }}><a>
+
+                                <span className="icon"><FontAwesomeIcon icon={faUser} /></span>
+                                <span className="text" onClick={() => this.logout()}>Đăng xuất</span>
+                            </a></li>
+
+
+
                         </ul>
                     </div>
 

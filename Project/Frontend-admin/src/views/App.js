@@ -72,9 +72,11 @@ class App extends React.Component {
       // console.log('message :', this.state.errMessage)
       if (res && res.data.status === 200) {
         // this.props.history.push('/home')
+
         this.setState({
           isLoggin: true,
         })
+        // browserHistory.push("/home");
       }
     } catch (e) {
       console.log(e);
@@ -91,40 +93,43 @@ class App extends React.Component {
         <div className="App-hoi-Phong">
 
           <header className="App-header">
-            {this.state.isLoggin ? <Switch>
-              <Route path="/home" exact>
-                <Nav />
-                <Home />
-              </Route>
-              <Route path="/list-product">
-                <Nav />
-                <Product />
-              </Route>
-              <Route path="/order">
-                <Nav />
-                <Order />
-              </Route>
-              <Route path="/addnewproduct">
-                <Nav />
-                <AddNewProduct />
-              </Route>
-              <Route path="/edit-product">
-                <Nav />
-                <EditProduct></EditProduct>
-              </Route>
-              <Route path="/detail-order">
-                <Nav />
-                <DetailOrder></DetailOrder>
-              </Route>
-              <Route path="/all-users">
-                <Nav />
-                <Users></Users>
-              </Route>
-              <Route path="/all-admins">
-                <Nav />
-                <Admins />
-              </Route>
-            </Switch>
+            {this.state.isLoggin ?
+              <Switch>
+                <Route path="/" exact>
+                  <Nav
+                    isLoggin={this.state.isLoggin}
+                  />
+                  <Home />
+                </Route>
+                <Route path="/list-product">
+                  <Nav />
+                  <Product />
+                </Route>
+                <Route path="/order">
+                  <Nav />
+                  <Order />
+                </Route>
+                <Route path="/addnewproduct">
+                  <Nav />
+                  <AddNewProduct />
+                </Route>
+                <Route path="/edit-product">
+                  <Nav />
+                  <EditProduct></EditProduct>
+                </Route>
+                <Route path="/detail-order">
+                  <Nav />
+                  <DetailOrder></DetailOrder>
+                </Route>
+                <Route path="/all-users">
+                  <Nav />
+                  <Users></Users>
+                </Route>
+                <Route path="/all-admins">
+                  <Nav />
+                  <Admins />
+                </Route>
+              </Switch>
               : <>
                 <div className='login-background'>
                   <div className='login-container'>
