@@ -20,6 +20,7 @@ if ($url == "/admins/sign_in" &&  $_SERVER['REQUEST_METHOD'] == 'POST') {
         $payload = [
             "iss" => "localhost",
             "iat" => time(),
+            "exp" => time() + 604800,
             "aud" => "myadmins",
             "id" => $admin['id'],
             "is_admin" => true
@@ -81,7 +82,7 @@ if ($url == "/admins" &&  $_SERVER['REQUEST_METHOD'] == 'POST') {
         $payload = [
             "iss" => "localhost",
             "iat" => time(),
-            "exp" => time() + 86400,
+            "exp" => time() + 604800,
             "aud" => "myadmins",
             "id" => $adminId,
             "is_admin" => true
@@ -95,6 +96,34 @@ if ($url == "/admins" &&  $_SERVER['REQUEST_METHOD'] == 'POST') {
     else {
         Response::responseInfo(500, "Fail to save admin");
     }
+}
+
+/**
+ * Cập nhật 1 adin
+ */
+if (preg_match("/admins\/(\d+)/", $url, $matches) && $_SERVER['REQUEST_METHOD'] == 'PUT') {
+    $ADMIN->checkIsAdmin();
+
+    $adminId = $matches[1];
+    $input = json_decode(file_get_contents("php://input"), true);
+
+    $admin = $ADMIN->get($connect, $adminId);
+    if (!$admin) {
+        Response::responseInfo(404, "Admin not found!!");
+        exit();
+    }
+
+    if (!empty($input['username'])) {
+        $admin = $ADMIN->findByUser($connect, $input['username']);
+        if ($admin) {
+            Response::responseInfo(409, "Admin already exist!!");
+            exit();
+        }
+    }
+
+    $ADMIN->update($connect, $adminId, $input);
+
+    Response::responseInfo(200, "ok");
 }
 
 /**
