@@ -189,7 +189,6 @@ export function Cart() {
           console.error('Error:', error);
         });
     }
-
     return (
         <section className="container cart-content-section">
             <h2 className="section-header">CART</h2>

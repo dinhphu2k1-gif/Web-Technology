@@ -46,7 +46,7 @@ TK: admin MK: 123456
 
 VD: ![img.png](image/img_6.png)
 
-- PUT ```/admins``` :cập nhật thông tin admin (tương tự như user)
+- PUT ```/admins/:admin_id``` :cập nhật thông tin admin (tương tự như user)
 
 - DELETE ```/admins/:admin_id``` : xoá admin
 

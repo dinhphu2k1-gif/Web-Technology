@@ -2,211 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88b09fb7-7313-4d1f-8d48-bd551ec945da" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Lab2/Lab 2.1/Display.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab2/Lab 2.1/Input.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab2/Lab 2.2/DateTime.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab3/Ex1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab3/Ex3/cookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab3/Ex3/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab3/Ex3/left.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab3/Ex3/right.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab3/Ex4/validation_form.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab3/Ex4/validation_input.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.1/createTable.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.1/insert.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.1/insert_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.1/query.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.1/sale.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.1/saleStart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.1/search.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.1/search.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.3/addcategory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.3/admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.3/business_service.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.4/add_biz.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.4/business.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.5/biz_listings.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab4/Lab4.5/business.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/comfirm_delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc1/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc1/.idea/mvc1.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc1/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc1/controller/Controller.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc1/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc1/model/Book.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc1/model/Model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc1/view/booklist.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc1/view/viewbook.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/.idea/mvc2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/application/controllers/ItemsController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/application/models/item.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/application/views/items/add.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/application/views/items/delete.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/application/views/items/footer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/application/views/items/header.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/application/views/items/view.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/application/views/items/viewall.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/config/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/db/empty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/library/bootstrap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/library/controller.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/library/model.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/library/shared.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/library/sqlquery.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/library/template.class.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/nbproject/private/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/nbproject/private/private.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/nbproject/private/private.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/nbproject/project.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/nbproject/project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/public/.htaccess" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/public/css/empty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/public/img/empty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/public/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/public/js/empty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/public/swf/empty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/scripts/empty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/tmp/cache/empty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/tmp/logs/empty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/mvc2/tmp/sessions/empty" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab5/viewall.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.2.1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.2.2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.2.3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.2.4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.2.5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.2.6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.2.7.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.2.7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.3.2.1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.3.2.2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.3.4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.3.5.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.3.6.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.3.7.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.3.8.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/6.3.9.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/Exercise1.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/Exercise1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/Exercise2.1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/Exercise2.2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/Exercise2.3.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/ex1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/ex2.1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/ex2.2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab 6.2/ex2.3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab6.1/Bates.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab6.1/Bates.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab6.1/Cabinets.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab6.1/Cabinets.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab6.1/Fizzics1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab6.1/bg1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab6.1/boards.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab6.1/bond.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Lab6.1/bricks.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Screenshot from 2022-06-09 21-06-54.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Screenshot from 2022-06-09 21-07-08.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab6/Screenshot from 2022-06-09 21-07-19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/7.1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/7.2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/7.3.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/7.4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/7.6.4.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX1/7.5.3.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX1/7.5.4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX1/7.5.5.docx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX2/7.6.2/pet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX2/7.6.2/read.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX2/7.6.2/write.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX2/7.6.3/read1.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX2/7.6.3/read2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX2/7.6.3/sins.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX2/7.6.5/ingredients.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX2/7.6.5/read1.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX2/7.6.5/read2.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX2/7.6.6/57.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Lab7/EX2/7.6.6/read.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/controller/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/controller/Bill.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/controller/Cart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/controller/Notification.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/controller/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/controller/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/model/Admin.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/model/Bill.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/model/Bill_Detail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/model/Cart.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/model/Cart_Detail.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/model/Notification.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/model/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/api/model/User.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/composer.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/config/config.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/database/db.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_11.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_12.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_13.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_14.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_15.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_16.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_17.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_18.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_19.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_20.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/image/img_9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/library/Response.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/library/bootstrap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/library/database.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/library/model.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/library/router.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/routes.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/autoload.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/composer/ClassLoader.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/composer/InstalledVersions.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/composer/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/composer/autoload_classmap.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/composer/autoload_namespaces.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/composer/autoload_psr4.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/composer/autoload_real.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/composer/autoload_static.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/composer/installed.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/composer/installed.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/composer/platform_check.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/firebase/php-jwt/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/firebase/php-jwt/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/firebase/php-jwt/composer.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/firebase/php-jwt/src/BeforeValidException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/firebase/php-jwt/src/CachedKeySet.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/firebase/php-jwt/src/ExpiredException.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/firebase/php-jwt/src/JWK.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/firebase/php-jwt/src/JWT.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/firebase/php-jwt/src/Key.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Project/Backend/vendor/firebase/php-jwt/src/SignatureInvalidException.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/ex1.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/ex1.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Lab1/ex2.html" beforeDir="false" afterPath="$PROJECT_DIR$/Lab1/ex2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Backend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Backend/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Backend/api/controller/Admin.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Backend/api/controller/Admin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Backend/api/controller/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Backend/api/controller/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Backend/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Backend/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Frontend-user/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Frontend-user/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Frontend-user/src/components/user/cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Frontend-user/src/components/user/cart/Cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Frontend-user/src/components/user/menu/Menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Frontend-user/src/components/user/menu/Menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/Frontend-user/src/constants/api_config.js" beforeDir="false" afterPath="$PROJECT_DIR$/Project/Frontend-user/src/constants/api_config.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -239,6 +43,11 @@
     "last_opened_file_path": "/home/dinhphu/Web-Technology-Lab",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
+    ]
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -250,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1658304577758</updated>
       <workItem from="1658304579081" duration="809000" />
-      <workItem from="1658305397338" duration="325000" />
+      <workItem from="1658305397338" duration="6561000" />
     </task>
     <servers />
   </component>

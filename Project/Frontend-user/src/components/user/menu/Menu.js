@@ -46,7 +46,6 @@ export function Menu() {
             console.error('Error:', error);
           });
     }, [])
-
     return (
         <section style={{maxWidth:"100vw"}}>
             <div className="title">
