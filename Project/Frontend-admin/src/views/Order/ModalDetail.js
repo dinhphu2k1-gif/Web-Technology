@@ -108,16 +108,21 @@ class ModalDetail extends React.Component {
                                         list_products && list_products.map((item, index) => {
                                             return (
                                                 <>
-                                                    <span className="col-1 text">Số lượng : {item.quantity}   </span>
-                                                    <span className="col-1 text"> Mã sản phẩm: {item.product_id}   </span>
-                                                    <span className="col-1 text"> Tổng tiền: {item.total_price}   </span>
+                                                    <div>
+                                                        <span className="col-1 text">Sản phẩm thứ : {index + 1}   </span>
 
+                                                        <span className="col-1 text">Số lượng : {item.quantity}   </span>
+                                                        <span className="col-1 text"> Mã sản phẩm: {item.product_id}   </span>
+                                                        <span className="col-1 text" > Tổng tiền: {item.total_price}   </span>
+
+                                                    </div>
 
                                                 </>
                                             )
                                         }
 
                                         )
+
                                     }
                                     </div>
                                 </div>
