@@ -15,6 +15,7 @@ import ModalCar from "./ModalCar";
 import ModalEdit from "./ModalEdit";
 import { faTurkishLiraSign } from "@fortawesome/free-solid-svg-icons";
 import ModalDetail from "./ModalDetail";
+import tonken from "../../services/token";
 class Product extends React.Component {
     constructor(props) {
         super(props);
@@ -35,7 +36,7 @@ class Product extends React.Component {
     getAllCarFromReact = async () => {
         let res = await axios.get('http://localhost:8000/products ', {
             headers: {
-                'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2NTgyNjgzMTEsImV4cCI6MTY1ODM1NDcxMSwiYXVkIjoibXlhZG1pbnMiLCJpZCI6MSwiaXNfYWRtaW4iOnRydWV9.7wfJVCqi-fsrtrAK6uyWF6yIe2euU2DrkhQgHd0WrYU'
+                'Authorization': tonken
             }
         });
         console.log('>>>check res: ', res.data.data);

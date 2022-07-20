@@ -38,6 +38,23 @@ class ModalEdit extends React.Component {
         })
 
     }
+    handleOnchaneInputImage = (event) => {
+        let upfile = event.target.files[0];
+        console.log(upfile);
+        const reader = new FileReader();
+        const scope = this
+        reader.onload = function () {
+            scope.setState({
+                image: reader.result
+            })
+        }
+        if (upfile) {
+            reader.readAsDataURL(upfile);
+            let a = reader.result;
+        }
+        console.log(this.state.image)
+
+    }
     // checkValideInput = () => {
     //     let isValid = true;
     //     let arrInput = ['name', 'image', 'price', 'year', 'description'];
@@ -97,15 +114,15 @@ class ModalEdit extends React.Component {
                                     <label>Hình ảnh</label>
                                     <div>
                                         <input type="file" id="myfile" name="myfile"
-                                            onChange={(event) => this.handleOnchaneInput(event, "image")}
-                                            value={this.state.image}
+                                            onChange={(event) => this.handleOnchaneInputImage(event)}
                                         />
+                                        <img src={this.state.image} />
                                     </div>
                                 </div>
                             </div>
                             <div className="row">
                                 <div className="col-6 ">
-                                    <label>Giá (triệu đồng )</label>
+                                    <label>Giá ($ )</label>
                                     <div><input type="text" style={{ width: '100%' }}
                                         onChange={(event) => this.handleOnchaneInput(event, "price")}
                                         value={this.state.price}

@@ -121,7 +121,7 @@ class ModalCar extends React.Component {
                             </div>
                             <div className="row">
                                 <div className="col-6 ">
-                                    <label>Giá (triệu đồng )</label>
+                                    <label>Giá ($ )</label>
                                     <div><input type="text" style={{ width: '100%' }}
                                         onChange={(event) => this.handleOnchaneInput(event, "price")}
                                         value={this.state.price}

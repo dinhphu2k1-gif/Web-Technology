@@ -104,7 +104,7 @@ class ModalDetail extends React.Component {
                             </div>
                             <div className="row">
                                 <div className="col-6 ">
-                                    <label>Giá (triệu đồng )</label>
+                                    <label>Giá ($ )</label>
                                     <div>{this.state.price}</div>
 
                                 </div>

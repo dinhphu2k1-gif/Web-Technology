@@ -8,49 +8,17 @@ class ModalEdit extends React.Component {
         }
     }
     componentDidMount() {
-        // console.log('list user la: ', this.props.editItem)
-        // this.findUser();
-        // let a = this.props.editItem;
-        // this.setState({
-        //     user_id: a.user_id,
-        //     name: a.name,
-        //     telephone: a.telephone,
-        //     address: a.address,
-        //     time_create: a.time_create,
-        // })
+        let a = this.props.editItem;
+        this.setState({
+            status: a.status,
+        })
     }
-    // findUser = () => {
-    //     let a = this.props.listUser;
-    //     let b = a.find(x => x.id === 4);
-    //     console.log(b);
-    // }
+
     toggle = () => {
         // alert('me toggle')
         this.props.toggleModal()
     }
-    // toggle: nút đóng, mở
-    // handleOnchaneInput = (event, id) => {
-    //     let copyState = { ...this.state };
-    //     copyState[id] = event.target.value
-    //     let c = copyState[id];
-    //     console.log('ID cần tìm: ', c)
 
-    //     let a = this.props.listUser;
-    //     console.log('List User trong ham inpu la ', a)
-    //     let b = a.find(x => x.id === Number(c));
-    //     console.log('User cần tìm là: ', b);
-    //     // copyState[id] = event.target.value; // do id đã đặt bằng các trường trong state
-    //     copyState[id] = event.target.value
-    //     this.setState({
-    //         user_id: c,
-    //         name: b.username,
-    //         telephone: b.telephone,
-    //         address: b.address,
-    //         time_create: Date().toLocaleString(),
-    //     })
-
-
-    // }
     handleOnchaneStatus = (event) => {
         let a = event.target.value;
         this.setState({
@@ -72,10 +40,7 @@ class ModalEdit extends React.Component {
     //     return isValid;
     // }
     handleEdit = () => {
-        // alert('hehe')
-        // let isValid = this.checkValideInput();
-        // if (isValid === true) {
-        //call API
+
         let a = this.props.editItem.id;
         this.props.editBill(this.state, a);
         // // }
@@ -109,8 +74,9 @@ class ModalEdit extends React.Component {
                                 <div className="col-6 ">
                                     <label>Trạng Thái</label>
                                     <div>
-                                        <select onChange={(event) => this.handleOnchaneStatus(event)}>
-                                            <option> </option>
+                                        <select onChange={(event) => this.handleOnchaneStatus(event)}
+                                            value={this.state.status}
+                                        >
 
                                             <option>accepted</option>
                                             <option>pending</option>

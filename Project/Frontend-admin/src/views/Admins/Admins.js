@@ -14,6 +14,7 @@ import { toast } from "react-toastify";
 import { deleteAdminService } from "../../services/service";
 import ModalEdit from "./ModalEdit";
 import { editAdminService } from "../../services/service";
+import tonken from "../../services/token";
 class Admins extends React.Component {
     constructor(props) {
         super(props);
@@ -31,7 +32,7 @@ class Admins extends React.Component {
     getAllAdminsService = async () => {
         let res = await axios.get('http://localhost:8000/admins', {
             headers: {
-                'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2NTgyNjgzMTEsImV4cCI6MTY1ODM1NDcxMSwiYXVkIjoibXlhZG1pbnMiLCJpZCI6MSwiaXNfYWRtaW4iOnRydWV9.7wfJVCqi-fsrtrAK6uyWF6yIe2euU2DrkhQgHd0WrYU'
+                'Authorization': tonken
             }
         });
         this.setState({

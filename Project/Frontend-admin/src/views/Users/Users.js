@@ -12,6 +12,7 @@ import ModalUser from "./ModalUser";
 import { toast } from "react-toastify";
 import { createNewUserService, deleteUserService } from "../../services/service";
 import ModalEdit from "./ModalEdit";
+import tonken from "../../services/token";
 import { editUserService } from "../../services/service";
 import Login from "../Login/Login";
 class Users extends React.Component {
@@ -41,7 +42,7 @@ class Users extends React.Component {
     getAllUserFromReact = async () => {
         let res = await axios.get('http://localhost:8000/users', {
             headers: {
-                'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2NTgyNjgzMTEsImV4cCI6MTY1ODM1NDcxMSwiYXVkIjoibXlhZG1pbnMiLCJpZCI6MSwiaXNfYWRtaW4iOnRydWV9.7wfJVCqi-fsrtrAK6uyWF6yIe2euU2DrkhQgHd0WrYU'
+                'Authorization': tonken
             }
         });
         console.log('>>>check res: ', res);
@@ -101,7 +102,7 @@ class Users extends React.Component {
             console.log('data truyen len la: ', data)
             let res = await axios.put(`http://localhost:8000/users/${id}`, data, {
                 headers: {
-                    'Authorization': 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJsb2NhbGhvc3QiLCJpYXQiOjE2NTgyNjgzMTEsImV4cCI6MTY1ODM1NDcxMSwiYXVkIjoibXlhZG1pbnMiLCJpZCI6MSwiaXNfYWRtaW4iOnRydWV9.7wfJVCqi-fsrtrAK6uyWF6yIe2euU2DrkhQgHd0WrYU'
+                    'Authorization': tonken
                 }
             });
             console.log('res edit user: ', res);

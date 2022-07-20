@@ -15,6 +15,7 @@ import "./Home.scss"
 import { Carousel } from 'react-bootstrap';
 import { FormControl } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import tonken from "../../services/token";
 class Home extends React.Component {
     // componentDidMount() {
     //     // setTimeout(() => {
