@@ -13,59 +13,61 @@ export function ProductDetail() {
     const [info, setInfo] = useState([])
 
     useEffect(() => {
-        let id = window.location.href.split('/').at(-1) 
+        let id = window.location.href.split('/').at(-1)
         fetch(API.DOMAIN + API.PRODUCTS + "/" + id, {
             method: 'GET', // or 'PUT'
             headers: {
-              'accept': '*/*',
-              'Content-Type': 'application/json',
+                'accept': '*/*',
+                'Content-Type': 'application/json',
             },
             credentials: "same-origin",
             // mode: 'no-cors'
-          })
-          .then(response => {
-            return response.json()})
-          .then(data => {
-            if (data?.status == 404) {
-                alert(data.message)
-            } else if (data?.status == 200) {
-                setInfo(data.data)
-            } else {
-                alert("ERROR")
-            }
-          })
-          .catch((error) => {
-            console.error('Error:', error);
-          });
+        })
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                if (data?.status == 404) {
+                    alert(data.message)
+                } else if (data?.status == 200) {
+                    setInfo(data.data)
+                } else {
+                    alert("ERROR")
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
     }, [])
 
     function handleAddItem() {
         fetch(API.DOMAIN + API.CART + "/" + window.localStorage.getItem("LCAR_USER_ID"), {
             method: 'POST', // or 'PUT'
             headers: {
-              'accept': '*/*',
-              'Content-Type': 'application/json',
-              'Authorization': (window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN"))
+                'accept': '*/*',
+                'Content-Type': 'application/json',
+                'Authorization': (window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN"))
             },
-            body: JSON.stringify({cart_id: window.localStorage.getItem('LCAR_USER_ID'), product_id: info.id, quantity: "1", total_price: info.price}),
+            body: JSON.stringify({ cart_id: window.localStorage.getItem('LCAR_USER_ID'), product_id: info.id, quantity: "1", total_price: info.price }),
             credentials: "same-origin",
             // mode: 'no-cors'
-          })
-          .then(response => {
-            return response.json()})
-          .then(data => {
-            if (data?.status == 409 || data?.status == 401) {
-                alert(data.message)
-            } else if (data?.status == 200) {
-                window.location.href = "/cart/" + window.localStorage.getItem('LCAR_USER_ID')
-            } else {
-                window.location.href = "/cart/" + window.localStorage.getItem('LCAR_USER_ID')
-            }
-          })
-          .catch((error) => {
-            console.error('Error:', error);
-          });
-    }    
+        })
+            .then(response => {
+                return response.json()
+            })
+            .then(data => {
+                if (data?.status == 409 || data?.status == 401) {
+                    alert(data.message)
+                } else if (data?.status == 200) {
+                    window.location.href = "/cart/" + window.localStorage.getItem('LCAR_USER_ID')
+                } else {
+                    window.location.href = "/cart/" + window.localStorage.getItem('LCAR_USER_ID')
+                }
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+    }
 
     return (
         <div className="container">
@@ -75,11 +77,11 @@ export function ProductDetail() {
                     <div className="left">
                         <h1>{info.name}</h1>
                         <p>
-                            <span style={{textDecoration: "line-through", marginRight:"30px"}}>${parseInt(info.price) + 1}M</span>
+                            <span style={{ textDecoration: "line-through", marginRight: "30px" }}>${parseInt(info.price) + 1}M</span>
                             <span>${info.price}M</span>
                         </p>
                         {(window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN")) &&
-                            <button className='btn' type="submit" style={{cursor:"pointer"}}
+                            <button className='btn' type="submit" style={{ cursor: "pointer" }}
                                 onClick={() => handleAddItem()}
                             >
                                 ADD TO CART
@@ -87,14 +89,14 @@ export function ProductDetail() {
                         }
                         {!(window.localStorage.getItem('LCAR_REMEMBER') ? window.localStorage.getItem("LCAR_TOKEN") : window.sessionStorage.getItem("LCAR_TOKEN")) &&
                             <div>
-                                <button className='btn' type="submit" style={{cursor:"pointer"}}
+                                <button className='btn' type="submit" style={{ cursor: "pointer" }}
                                     onClick={() => handleAddItem()}
                                     disabled
                                 >
                                     ADD TO CART
                                 </button>
-                                <br/>
-                                <span style={{fontFamily:"cursive"}}>Hãy đăng nhập để thêm sản phẩm vào giỏ hàng </span>
+                                <br />
+                                <span style={{ fontFamily: "cursive" }}>Hãy đăng nhập để thêm sản phẩm vào giỏ hàng </span>
                             </div>
                         }
                     </div>
@@ -102,14 +104,14 @@ export function ProductDetail() {
 
                     <div className="right">
 
-                        <img className='p-img' src={"data:image/jpeg;base64, " + info.image} alt="White Headphones"/>
+                        <img className='p-img' src={info.image} alt="White Headphones" />
                     </div>
                 </article>
 
                 <article id="pfeatures">
                     <section className="first">
                         <div className="left">
-                            <img className='p-img' src={"data:image/jpeg;base64, " + info.image} alt="Black Headphones"/>
+                            <img className='p-img' src={info.image} alt="Black Headphones" />
                         </div>
                         <div className="right">
                             <div className='right-menu'>
@@ -126,7 +128,7 @@ export function ProductDetail() {
                                     <h3>CHIỀU DÀI CƠ SỞ</h3>
                                     <p>2.968 MM</p>
                                 </div>
-                                
+
                                 <div>
                                     <h3>ĐỘNG CƠ MẠNH MẼ</h3>
                                     <p>2.0 L -228 HP</p>
@@ -156,13 +158,13 @@ export function ProductDetail() {
                             <p>Sạc không dây, điều hòa tự động 2 vùng độc lập kiểm soát chất lượng không khí bằng ion, rèm che nắng chỉnh điện, màn hình giải trí 10.4 inch cùng dàn âm thanh 13 loa. Hỗ trợ kết nối Apple Carplay.</p>
                         </div>
                         <div className="right">
-                            <img className='p-img' src={"data:image/jpeg;base64, " + info.image} alt="Gold Headphones"/>
+                            <img className='p-img' src={info.image} alt="Gold Headphones" />
                         </div>
                     </section>
                 </article>
-                
+
             </main>
-            
+
         </div>
     )
 }

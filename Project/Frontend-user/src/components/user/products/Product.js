@@ -15,7 +15,7 @@ export function Product(data) {
             <div className="item">
                 <div className='hot-item'>
                     <img className='hot-c-img' src={hot} alt="" />
-                    <img className='src-img' src={"data:image/jpeg;base64, " + info.image} alt="" />
+                    <img className='src-img' src={info.image} alt="" />
                 </div>
                 <div className="action">
                     <span className='car-min-info'>{info.name}</span>
