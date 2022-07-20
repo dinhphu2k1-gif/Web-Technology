@@ -1,0 +1,45 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Jost', sans-serif;
+    // text-align: center;
+}
+.home-detail{
+    background-image:url('https://images.freecreatives.com/wp-content/uploads/2015/06/best-car-wallpapers.jpg') ;
+    .home-header{
+        color: orangered;
+        height: 30vh;
+        
+        .page-title{
+            color: indianred;
+            font-weight: 600;
+            font-size: xx-large;
+            text-align: center;
+            align-items: center;
+        }
+    }
+    height: 100vh;
+    // background-image:url('https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg?w=2000');
+    margin-left:20vw;
+    .car-slide{
+        margin:0 auto;
+        height: 50px;
+        
+    }
+    .title{
+        font-size: 40px;
+        letter-spacing: 2px;
+        color: #f4f1ec;
+        font-weight: 1000;
+    }
+    
+}
+div#carouselExampleSlidesOnly{
+    height: 70vh;
+    padding: 0;
+    // border: 1px solid grey;
+    // background-image: url('https://images.freecreatives.com/wp-content/uploads/2015/06/best-car-wallpapers.jpg');
+    background-size: 1300px;
+}
+img.d-block.w-100 {
+    border-radius: 12%;
+}
