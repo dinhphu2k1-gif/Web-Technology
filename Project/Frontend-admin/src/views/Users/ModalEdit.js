@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Toast } from 'reactstrap';
+import { toast } from "react-toastify";
 class ModalEdit extends React.Component {
     constructor(props) {
         super(props);
@@ -54,20 +55,20 @@ class ModalEdit extends React.Component {
         return isValid;
     }
     handleEditUser = () => {
-        let user = this.props.UserEdit;
-        let isValid = this.checkValideInput();
-        if (isValid === true) {
-            //call API
-            this.props.editUser(this.state, user.id);
+        try {
+            let user = this.props.UserEdit;
+            let isValid = this.checkValideInput();
+            if (isValid === true) {
+                //call API
+                this.props.editUser(this.state, user.id);
+            }
+            toast.success('Sửa thành công')
+        } catch (e) {
+            console.log(e)
+            toast.error('Lỗi')
         }
-        // console.log('>>> data modal', this.state)
-        this.setState({
-            username: '',
-            password: '',
-            telephone: '',
-            email: '',
-            address: '',
-        })
+
+
     }
     render() {
         let user = this.props.UserEdit;
@@ -81,7 +82,7 @@ class ModalEdit extends React.Component {
                     size='lg'
                     centered
                 >
-                    <ModalHeader toggle={() => this.toggle()}>Tạo mới người dùng</ModalHeader>
+                    <ModalHeader toggle={() => this.toggle()}>Sửa người dùng</ModalHeader>
                     <ModalBody>
                         <div className="container">
                             <div className="row">
@@ -112,9 +113,9 @@ class ModalEdit extends React.Component {
                                 </div>
                                 <div className="col-6 ">
                                     <label>Địa chỉ</label>
-                                    <div><input type="text" style={{ width: '100%' }}
+                                    <div><input type="text" style={{ width: '100%' }} value={this.state.address}
                                         onChange={(event) => this.handleOnchaneInput(event, "address")}
-                                        value={this.state.address}
+
                                     /></div>
 
                                 </div>

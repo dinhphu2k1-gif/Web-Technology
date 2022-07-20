@@ -9,14 +9,7 @@ import {
     Switch,
     Route,
 } from "react-router-dom"; // hàm chuyển trang
-import { type } from '@testing-library/user-event/dist/type';
-import Nav from '../Nav/Nav';
 
-import Product from '../Product/Product';
-import Order from '../Order/Order';
-import AddNewProduct from '../AddNewProduct/AddNewProduct.js';
-import Users from '../Users/Users';
-import Admins from '../Admins/Admins';
 class Login extends Component {
     constructor(props) {
         super(props);

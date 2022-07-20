@@ -5,7 +5,7 @@ import 'font-awesome/css/font-awesome.min.css';
 import Home from './HomePage/Home.js';
 import Product from './Product/Product';
 import Order from './Order/Order';
-import AddNewProduct from './AddNewProduct/AddNewProduct.js';
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,8 +18,7 @@ import {
   Link,
   withRouter
 } from "react-router-dom";
-import EditProduct from './EditProduct/EditProduct';
-import DetailOrder from './DetailOrder/DetailOrder';
+
 import Login from './Login/Login';
 import React from 'react';
 import { LoginAdmin } from '../services/service';
@@ -108,18 +107,6 @@ class App extends React.Component {
                 <Route path="/order">
                   <Nav />
                   <Order />
-                </Route>
-                <Route path="/addnewproduct">
-                  <Nav />
-                  <AddNewProduct />
-                </Route>
-                <Route path="/edit-product">
-                  <Nav />
-                  <EditProduct></EditProduct>
-                </Route>
-                <Route path="/detail-order">
-                  <Nav />
-                  <DetailOrder></DetailOrder>
                 </Route>
                 <Route path="/all-users">
                   <Nav />
